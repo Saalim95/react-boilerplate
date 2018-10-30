@@ -27,6 +27,14 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html'
-        })
+        }),
+        new CleanWebpackPlugin(['dist/js','dist/css']),
+		new webpack.HotModuleReplacementPlugin() ,
+		new HtmlWebpackPlugin({
+			filename:'index.html',
+			title:'Home',
+			template:'src/index.html',
+			//favicon:'./src/assets/favicon.png'
+		}),
     ]
 }
