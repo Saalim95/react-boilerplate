@@ -7,7 +7,7 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.join(__dirname, '/dist'),
-        filename: 'index_bundle.js',
+        filename: '[hash].js',
 	publicPath:env=="dev"?'/':'/dist/'
     },
     module: {
